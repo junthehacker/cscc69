@@ -1,7 +1,5 @@
 /**
- * This illustrates how race condition can happen if you don't use locks
- * Here we have 2 threads withdrawing money from the account
- * however withdrawing takes 1 second to process, resulting overdraft.
+ * Spinlock solution
  */
 
 #include <stdio.h>
