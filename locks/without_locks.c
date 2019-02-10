@@ -14,7 +14,7 @@ int account_balance = 0;
 void *deposit(void *vargp) {
     account_balance += 100;
     printf("Deposit successful, balance: %d\n", account_balance);
-    return NULL;
+    return (void *)0xdeadbeef;
 }
 
 void *withdrawal(void *vargp) {
@@ -26,7 +26,7 @@ void *withdrawal(void *vargp) {
     } else {
         printf("Failed to withdraw, balance not sufficient: %d\n", account_balance);
     }
-    return NULL;
+    return (void *)0xdeadbeef;
 }
 
 
